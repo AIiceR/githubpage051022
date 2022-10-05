@@ -1,12 +1,74 @@
-// @import "base";
+@import "base";
 // You need the base only when you are not using bootstrap. In that case, go to _base.scss
 // to customize it as you may want.
 
 @import "variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Write your sass code here or import partials
+
+body {
+  background-color: rgb(248, 242, 222);
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
 
 h1 {
   color: tomato;
 }
+
+header {
+  height: 15vh;
+  border: 1px solid;
+  display: grid;
+  place-items: center;
+}
+
+.image {
+  background-color: lightcyan;
+  margin: 2vw;
+}
+
+img {
+  padding: 2vw;
+  margin: 10vw; 
+}
+
+.box1 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: grid;
+  place-items: center;
+  font-size: 2em;
+}
+
+.box1 > p {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  display: grid;
+  place-items: center;
+  font-size: 2em; 
+  padding: 1vw;
+}
+
+.block {
+  grid-row: 3 / 5;
+  grid-column: 3 / 4;
+  background-color: plum;
+  display: grid;
+  place-items: center;
+  border: 2px solid lightgray;
+  margin: 0.5vw;
+}
+
